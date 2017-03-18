@@ -12,19 +12,13 @@
   </url>
   
   <url>
-    <loc>https://andr3a88.github.io/tags/about/</loc>
-    <lastmod>2017-03-18T12:00:00-02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://andr3a88.github.io/categories/about/</loc>
     <lastmod>2017-03-18T12:00:00-02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andr3a88.github.io/about/</loc>
+    <loc>https://andr3a88.github.io/tags/about/</loc>
     <lastmod>2017-03-18T12:00:00-02:00</lastmod>
     <priority>0</priority>
   </url>
