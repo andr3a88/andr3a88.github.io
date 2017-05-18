@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Swift on Andrea Stevanato - iOS Developer - andr3a88</title>
-    <link>https://andr3a88.github.io/tags/swift/index.xml</link>
-    <description>Recent content in Swift on Andrea Stevanato - iOS Developer - andr3a88</description>
+    <title>Code on Andrea Stevanato - iOS Developer - andr3a88</title>
+    <link>https://andr3a88.github.io/categories/code/index.xml</link>
+    <description>Recent content in Code on Andrea Stevanato - iOS Developer - andr3a88</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="https://andr3a88.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://andr3a88.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Swift Coding Style</title>
@@ -335,12 +335,183 @@ function_parameter_count:
     </item>
     
     <item>
-      <title>My first blog page</title>
-      <link>https://andr3a88.github.io/blog/first/</link>
-      <pubDate>Sat, 18 Mar 2017 12:00:00 +0200</pubDate>
+      <title>Objective-C Coding Style</title>
+      <link>https://andr3a88.github.io/code/objc-codestyle/</link>
+      <pubDate>Sun, 19 Mar 2017 20:36:20 +0100</pubDate>
       
-      <guid>https://andr3a88.github.io/blog/first/</guid>
-      <description>&lt;p&gt;Note: This article &lt;a href=&#34;https://andr3a88.github.io/&#34;&gt;Link&lt;/a&gt;.&lt;/p&gt;
+      <guid>https://andr3a88.github.io/code/objc-codestyle/</guid>
+      <description>
+
+&lt;p&gt;My code convention for Objective-C inspired by &lt;a href=&#34;#sources&#34;&gt;Sources&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#code-organization&#34;&gt;Code Organization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#spacing&#34;&gt;Spacing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#conditionals&#34;&gt;Conditionals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#ternary-operator&#34;&gt;Ternary Operator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#methods&#34;&gt;Methods&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#variables&#34;&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#naming&#34;&gt;Naming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#comments&#34;&gt;Comments&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#constants&#34;&gt;Constants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#singletons&#34;&gt;Singletons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#sources&#34;&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;code-organization&#34;&gt;Code Organization&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code&gt;#pragma mark -&lt;/code&gt; to categorize methods in functional groupings.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;#pragma mark - Lifecycle
+
+- (instancetype)init {}
+- (void)viewDidLoad {}
+- (void)viewWillAppear:(BOOL)animated {}
+- (void)didReceiveMemoryWarning {}
+
+#pragma mark - Custom Accessors
+
+- (void)setCustomProperty:(id)value {}
+- (id)customProperty {}
+
+#pragma mark - Public
+
+- (void)publicMethod {}
+
+#pragma mark - Private
+
+- (void)privateMethod {}
+
+#pragma mark - Protocol conformance
+#pragma mark - UITextFieldDelegate
+#pragma mark - UITableViewDataSource
+#pragma mark - UITableViewDelegate
+
+#pragma mark - IBActions
+
+- (IBAction)submitData:(id)sender {}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;spacing&#34;&gt;Spacing&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Indent using tabs. Be sure to set this preference in Xcode.&lt;/li&gt;
+&lt;li&gt;Method braces and other braces (&lt;code&gt;if&lt;/code&gt;/&lt;code&gt;else&lt;/code&gt;/&lt;code&gt;switch&lt;/code&gt;/&lt;code&gt;while&lt;/code&gt; etc.) always open on the same line as the statement but close on a new line.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;if(user.isHappy) {
+    // Do something
+}
+else {
+    // Do something else
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There should be exactly one blank line between methods to aid in visual clarity and organization.&lt;/li&gt;
+&lt;li&gt;Whitespace within methods should be used to separate functionality (though often this can indicate an opportunity to split the method into several, smaller methods). In methods with long or verbose names, a single line of whitespace may be used to provide visual separation before the method’s body.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@synthesize&lt;/code&gt; and &lt;code&gt;@dynamic&lt;/code&gt; should each be declared on new lines in the implementation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conditionals&#34;&gt;Conditionals&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;if (!error) {
+    return success;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Not:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;if (!error)
+    return success;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;or:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;if (!error) return success;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;ternary-operator&#34;&gt;Ternary Operator&lt;/h2&gt;
+
+&lt;p&gt;The Ternary operator, &lt;strong&gt;?&lt;/strong&gt; , should only be used when it increases clarity or code neatness, only with a single condition.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;result = a &amp;gt; b ? x : y;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Not:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;result = a &amp;gt; b ? x = c &amp;gt; d ? c : d : y;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+
+&lt;p&gt;In method signatures, there should be a space after the scope (-/+ symbol). There should be a space between the method segments.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;- (void)setExampleText:(NSString *)text image:(UIImage *)image;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The beginning bracket should be in the same line of the method signature&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;- (void)setExampleText:(NSString *)text image:(UIImage *)image {    
+    // Code...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;variables&#34;&gt;Variables&lt;/h2&gt;
+
+&lt;p&gt;TO-DO&lt;/p&gt;
+
+&lt;h2 id=&#34;naming&#34;&gt;Naming&lt;/h2&gt;
+
+&lt;p&gt;TO-DO&lt;/p&gt;
+
+&lt;h2 id=&#34;comments&#34;&gt;Comments&lt;/h2&gt;
+
+&lt;p&gt;TO-DO&lt;/p&gt;
+
+&lt;h2 id=&#34;constants&#34;&gt;Constants&lt;/h2&gt;
+
+&lt;p&gt;TO-DO&lt;/p&gt;
+
+&lt;h2 id=&#34;singletons&#34;&gt;Singletons&lt;/h2&gt;
+
+&lt;p&gt;Singleton objects should use a thread-safe pattern for creating their shared instance.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;+ (instancetype)sharedInstance 
+{
+   static id sharedInstance = nil;
+
+   static dispatch_once_t onceToken;
+   dispatch_once(&amp;amp;onceToken, ^{
+      sharedInstance = [[self alloc] init];
+   });
+
+   return sharedInstance;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;sources&#34;&gt;Sources&lt;/h2&gt;
+
+&lt;p&gt;This guide has been built taking inspiration from the following sources:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/github/objective-c-style-guide&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/realm/realm-cocoa/wiki/Objective-C-Style-Guide&#34;&gt;Realm-Cocoa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/NYTimes/objective-c-style-guide&#34;&gt;New York Times&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/raywenderlich/objective-c-style-guide&#34;&gt;Raywenderlich&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
