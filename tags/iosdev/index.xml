@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iosdev on Andrea Stevanato - iOS Developer - andr3a88</title>
-    <link>https://andr3a88.github.io/tags/iosdev/index.xml</link>
+    <link>https://andr3a88.github.io/tags/iosdev/</link>
     <description>Recent content in Iosdev on Andrea Stevanato - iOS Developer - andr3a88</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="https://andr3a88.github.io/tags/iosdev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2017 20:36:20 +0100</lastBuildDate>
+    
+	<atom:link href="https://andr3a88.github.io/tags/iosdev/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Swift Coding Style</title>
@@ -14,34 +17,11 @@
       <pubDate>Mon, 20 Mar 2017 20:36:20 +0100</pubDate>
       
       <guid>https://andr3a88.github.io/code/swift-codestyle/</guid>
-      <description>
-
-&lt;p&gt;My code convention for Swift inspired by &lt;a href=&#34;#sources&#34;&gt;Sources&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;code/swift-codestyle/#code-organization&#34;&gt;Code Organization&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/swift-codestyle/#spacing&#34;&gt;Spacing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/swift-codestyle/#sources&#34;&gt;Sources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;code-organization&#34;&gt;Code Organization&lt;/h2&gt;
-
-&lt;p&gt;TO-DO&lt;/p&gt;
-
-&lt;h2 id=&#34;spacing&#34;&gt;Spacing&lt;/h2&gt;
-
-&lt;p&gt;TO-DO&lt;/p&gt;
-
-&lt;h2 id=&#34;sources&#34;&gt;Sources&lt;/h2&gt;
-
-&lt;p&gt;This guide has been built taking inspiration from the following sources:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/github/swift-style-guide&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> My code convention for Swift inspired by Sources
+Table of Contents  Code Organization Spacing Sources  Code Organization TO-DO
+Spacing TO-DO
+Sources This guide has been built taking inspiration from the following sources:
+ GitHub  </description>
     </item>
     
     <item>
@@ -50,93 +30,8 @@
       <pubDate>Mon, 20 Mar 2017 20:15:28 +0100</pubDate>
       
       <guid>https://andr3a88.github.io/code/swiftlint/</guid>
-      <description>
-
-&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;brew install swiftlint
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;p&gt;Integrate SwiftLint into an Xcode scheme to get warnings and errors displayed in the IDE. Just add a new &amp;ldquo;Run Script Phase&amp;rdquo; with:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;if which swiftlint &amp;gt;/dev/null; then
-  swiftlint
-else
-  echo &amp;quot;warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint&amp;quot;
-fi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;$ swiftlint help
-Available commands:
-
-   autocorrect  Automatically correct warnings and errors
-   help         Display general or command-specific help
-   lint         Print lint warnings and errors for the Swift files in the current directory (default command)
-   rules        Display the list of rules and their identifiers
-   version      Display the current version of SwiftLint
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;my-configuration-file-swiftlint-yml&#34;&gt;My configuration file (.swiftlint.yml)&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;disabled_rules: # rule identifiers to exclude from running
-  - colon
-  - conditional_binding_cascade
-  - comma
-  - control_statement
-  - force_cast
-  - legacy_constant
-  - legacy_constructor
-  - line_length
-  - nesting
-  - todo
-  - trailing_whitespace
-  - type_name
-  - variable_name
-  - cyclomatic_complexity
-
-opt_in_rules: # some rules are only opt-in
-  #- empty_count
-  #- missing_docs
-
-included: # paths to include during linting. `--path` is ignored if present.
-  #- Folder
-  #- ../Folder/Pod
-
-excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - Carthage
-  - Pods
-
-# These properties are marked as error by default.
-force_try: warning
-
-file_length:
-  warning: 550
-  error: 1200
-  
-function_body_length:
-  warning: 150
-  error: 200
-  
-type_body_length:
-  warning: 300
-  error: 1000
-  
-function_parameter_count:
-  warning: 10
-  error: 15
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;repository&#34;&gt;Repository&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/realm/SwiftLint&#34;&gt;SwiftLint Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Installation brew install swiftlint  Usage Integrate SwiftLint into an Xcode scheme to get warnings and errors displayed in the IDE. Just add a new &amp;ldquo;Run Script Phase&amp;rdquo; with:
+if which swiftlint &amp;gt;/dev/null; then swiftlint else echo &amp;quot;warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint&amp;quot; fi  Commands $ swiftlint help Available commands: autocorrect Automatically correct warnings and errors help Display general or command-specific help lint Print lint warnings and errors for the Swift files in the current directory (default command) rules Display the list of rules and their identifiers version Display the current version of SwiftLint  My configuration file (.</description>
     </item>
     
     <item>
@@ -145,179 +40,9 @@ function_parameter_count:
       <pubDate>Sun, 19 Mar 2017 20:36:20 +0100</pubDate>
       
       <guid>https://andr3a88.github.io/code/objc-codestyle/</guid>
-      <description>
-
-&lt;p&gt;My code convention for Objective-C inspired by &lt;a href=&#34;#sources&#34;&gt;Sources&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#code-organization&#34;&gt;Code Organization&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#spacing&#34;&gt;Spacing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#conditionals&#34;&gt;Conditionals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#ternary-operator&#34;&gt;Ternary Operator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#methods&#34;&gt;Methods&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#variables&#34;&gt;Variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#naming&#34;&gt;Naming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#comments&#34;&gt;Comments&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#constants&#34;&gt;Constants&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#singletons&#34;&gt;Singletons&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;code/objc-codestyle/#sources&#34;&gt;Sources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;code-organization&#34;&gt;Code Organization&lt;/h2&gt;
-
-&lt;p&gt;Use &lt;code&gt;#pragma mark -&lt;/code&gt; to categorize methods in functional groupings.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;#pragma mark - Lifecycle
-
-- (instancetype)init {}
-- (void)viewDidLoad {}
-- (void)viewWillAppear:(BOOL)animated {}
-- (void)didReceiveMemoryWarning {}
-
-#pragma mark - Custom Accessors
-
-- (void)setCustomProperty:(id)value {}
-- (id)customProperty {}
-
-#pragma mark - Public
-
-- (void)publicMethod {}
-
-#pragma mark - Private
-
-- (void)privateMethod {}
-
-#pragma mark - Protocol conformance
-#pragma mark - UITextFieldDelegate
-#pragma mark - UITableViewDataSource
-#pragma mark - UITableViewDelegate
-
-#pragma mark - IBActions
-
-- (IBAction)submitData:(id)sender {}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;spacing&#34;&gt;Spacing&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Indent using tabs. Be sure to set this preference in Xcode.&lt;/li&gt;
-&lt;li&gt;Method braces and other braces (&lt;code&gt;if&lt;/code&gt;/&lt;code&gt;else&lt;/code&gt;/&lt;code&gt;switch&lt;/code&gt;/&lt;code&gt;while&lt;/code&gt; etc.) always open on the same line as the statement but close on a new line.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;if(user.isHappy) {
-    // Do something
-}
-else {
-    // Do something else
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;There should be exactly one blank line between methods to aid in visual clarity and organization.&lt;/li&gt;
-&lt;li&gt;Whitespace within methods should be used to separate functionality (though often this can indicate an opportunity to split the method into several, smaller methods). In methods with long or verbose names, a single line of whitespace may be used to provide visual separation before the method’s body.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;@synthesize&lt;/code&gt; and &lt;code&gt;@dynamic&lt;/code&gt; should each be declared on new lines in the implementation.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;conditionals&#34;&gt;Conditionals&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;if (!error) {
-    return success;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Not:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;if (!error)
-    return success;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;or:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;if (!error) return success;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;ternary-operator&#34;&gt;Ternary Operator&lt;/h2&gt;
-
-&lt;p&gt;The Ternary operator, &lt;strong&gt;?&lt;/strong&gt; , should only be used when it increases clarity or code neatness, only with a single condition.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;result = a &amp;gt; b ? x : y;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Not:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;result = a &amp;gt; b ? x = c &amp;gt; d ? c : d : y;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
-
-&lt;p&gt;In method signatures, there should be a space after the scope (-/+ symbol). There should be a space between the method segments.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;- (void)setExampleText:(NSString *)text image:(UIImage *)image;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The beginning bracket should be in the same line of the method signature&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;For example:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;- (void)setExampleText:(NSString *)text image:(UIImage *)image {    
-    // Code...
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;variables&#34;&gt;Variables&lt;/h2&gt;
-
-&lt;p&gt;TO-DO&lt;/p&gt;
-
-&lt;h2 id=&#34;naming&#34;&gt;Naming&lt;/h2&gt;
-
-&lt;p&gt;TO-DO&lt;/p&gt;
-
-&lt;h2 id=&#34;comments&#34;&gt;Comments&lt;/h2&gt;
-
-&lt;p&gt;TO-DO&lt;/p&gt;
-
-&lt;h2 id=&#34;constants&#34;&gt;Constants&lt;/h2&gt;
-
-&lt;p&gt;TO-DO&lt;/p&gt;
-
-&lt;h2 id=&#34;singletons&#34;&gt;Singletons&lt;/h2&gt;
-
-&lt;p&gt;Singleton objects should use a thread-safe pattern for creating their shared instance.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;+ (instancetype)sharedInstance 
-{
-   static id sharedInstance = nil;
-
-   static dispatch_once_t onceToken;
-   dispatch_once(&amp;amp;onceToken, ^{
-      sharedInstance = [[self alloc] init];
-   });
-
-   return sharedInstance;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;sources&#34;&gt;Sources&lt;/h2&gt;
-
-&lt;p&gt;This guide has been built taking inspiration from the following sources:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/github/objective-c-style-guide&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/realm/realm-cocoa/wiki/Objective-C-Style-Guide&#34;&gt;Realm-Cocoa&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/NYTimes/objective-c-style-guide&#34;&gt;New York Times&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/raywenderlich/objective-c-style-guide&#34;&gt;Raywenderlich&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>My code convention for Objective-C inspired by Sources
+Table of Contents  Code Organization Spacing Conditionals Ternary Operator Methods Variables Naming Comments Constants Singletons Sources  Code Organization Use #pragma mark - to categorize methods in functional groupings.
+#pragma mark - Lifecycle - (instancetype)init {} - (void)viewDidLoad {} - (void)viewWillAppear:(BOOL)animated {} - (void)didReceiveMemoryWarning {} #pragma mark - Custom Accessors - (void)setCustomProperty:(id)value {} - (id)customProperty {} #pragma mark - Public - (void)publicMethod {} #pragma mark - Private - (void)privateMethod {} #pragma mark - Protocol conformance #pragma mark - UITextFieldDelegate #pragma mark - UITableViewDataSource #pragma mark - UITableViewDelegate #pragma mark - IBActions - (IBAction)submitData:(id)sender {}  Spacing  Indent using tabs.</description>
     </item>
     
   </channel>

@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on Andrea Stevanato - iOS Developer - andr3a88</title>
-    <link>https://andr3a88.github.io/tags/about/index.xml</link>
+    <link>https://andr3a88.github.io/tags/about/</link>
     <description>Recent content in About on Andrea Stevanato - iOS Developer - andr3a88</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="https://andr3a88.github.io/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Mar 2017 12:00:00 -0200</lastBuildDate>
+    
+	<atom:link href="https://andr3a88.github.io/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>About</title>
@@ -14,10 +17,8 @@
       <pubDate>Sat, 18 Mar 2017 12:00:00 -0200</pubDate>
       
       <guid>https://andr3a88.github.io/about/</guid>
-      <description>&lt;p&gt;Short description.&lt;/p&gt;
-
-&lt;p&gt;My CV &lt;a href=&#34;https://andr3a88.github.io/&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>iOS Developer @ennovaresearch (Venice, Italy).
+Swift and clean code enthusiast. Also working on backend development with NodeJS, Typescript.</description>
     </item>
     
   </channel>
