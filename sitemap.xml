@@ -4,13 +4,90 @@
   
   <url>
     <loc>https://andr3a88.github.io/</loc>
-    <lastmod>2017-03-20T20:36:20+01:00</lastmod>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/blog/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://andr3a88.github.io/categories/</loc>
-    <lastmod>2017-03-20T20:36:20+01:00</lastmod>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/categories/development/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/blog/first/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/tags/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/tags/andrea/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/tags/bitrise/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/tags/ci/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/tags/continuous-integration/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/tags/danger-swift/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/tags/ios/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/tags/ios-dev/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/tags/stevanato/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andr3a88.github.io/tags/swift/</loc>
+    <lastmod>2019-11-21T12:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -23,12 +100,6 @@
   <url>
     <loc>https://andr3a88.github.io/code/swift-codestyle/</loc>
     <lastmod>2017-03-20T20:36:20+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://andr3a88.github.io/tags/</loc>
-    <lastmod>2017-03-20T20:36:20+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -45,12 +116,6 @@
   
   <url>
     <loc>https://andr3a88.github.io/tags/iosdev/</loc>
-    <lastmod>2017-03-20T20:36:20+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://andr3a88.github.io/tags/swift/</loc>
     <lastmod>2017-03-20T20:36:20+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -114,47 +179,6 @@
   <url>
     <loc>https://andr3a88.github.io/tags/about/</loc>
     <lastmod>2017-03-18T12:00:00-02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://andr3a88.github.io/blog/</loc>
-    <lastmod>2017-03-18T12:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://andr3a88.github.io/blog/first/</loc>
-    <lastmod>2017-03-18T12:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://andr3a88.github.io/tags/andrea/</loc>
-    <lastmod>2017-03-18T12:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://andr3a88.github.io/tags/ios/</loc>
-    <lastmod>2017-03-18T12:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://andr3a88.github.io/tags/ios-dev/</loc>
-    <lastmod>2017-03-18T12:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://andr3a88.github.io/categories/news/</loc>
-    <lastmod>2017-03-18T12:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://andr3a88.github.io/tags/stevanato/</loc>
-    <lastmod>2017-03-18T12:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
