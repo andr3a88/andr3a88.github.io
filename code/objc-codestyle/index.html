@@ -2,7 +2,6 @@
 <html lang="en-US">
 <head>
 
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,18 +9,19 @@
 <meta name="description" content="Andrea Stevanato Personal web site">
 <meta name="keywords" content="blog,developer,swift,swiftlang,ios,developer,ios-dev,ios developer">
 
-<base href="https://andr3a88.github.io">
+<title>
+  Andrea Stevanato - iOS Developer - andr3a88 - Objective-C Coding Style 
+</title>
 
-<title>Andrea Stevanato - iOS Developer - andr3a88</title>
-
-<meta name="generator" content="Hugo 0.55.0" />
+<meta name="generator" content="Hugo 0.107.0">
 
 
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link rel="stylesheet" href="https://andr3a88.github.io/css/main.css">
+<link rel="stylesheet" href="https://andr3a88.github.io/css/custom.css">
 
 
 
@@ -38,14 +38,15 @@
 <div class="container">
 
 
-<header class="row text-left title">
+<header class="text-left title">
   <h1 class="title">Objective-C Coding Style</h1>
 </header>
-<section id="category-pane" class="row meta">
+<section id="category-pane" class="meta">
   
   <div class="col-md-12">
     <h6 class="text-left meta">
         PUBLISHED ON MAR 19, 2017 
+       / 2 MIN READ
       
       
       
@@ -60,14 +61,28 @@
   </div>
   
 </section>
-<section id="content-pane" class="row">
+<section id="content-pane" class="">
   <div class="col-md-12 text-justify content">
     
-
-<p>My code convention for Objective-C inspired by <a href="#sources">Sources</a></p>
-
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#table-of-contents">Table of Contents</a></li>
+    <li><a href="#code-organization">Code Organization</a></li>
+    <li><a href="#spacing">Spacing</a></li>
+    <li><a href="#conditionals">Conditionals</a></li>
+    <li><a href="#ternary-operator">Ternary Operator</a></li>
+    <li><a href="#methods">Methods</a></li>
+    <li><a href="#variables">Variables</a></li>
+    <li><a href="#naming">Naming</a></li>
+    <li><a href="#comments">Comments</a></li>
+    <li><a href="#constants">Constants</a></li>
+    <li><a href="#singletons">Singletons</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+    
+    <p>My code convention for Objective-C inspired by <a href="#sources">Sources</a></p>
 <h2 id="table-of-contents">Table of Contents</h2>
-
 <ul>
 <li><a href="code/objc-codestyle/#code-organization">Code Organization</a></li>
 <li><a href="code/objc-codestyle/#spacing">Spacing</a></li>
@@ -81,153 +96,101 @@
 <li><a href="code/objc-codestyle/#singletons">Singletons</a></li>
 <li><a href="code/objc-codestyle/#sources">Sources</a></li>
 </ul>
-
 <h2 id="code-organization">Code Organization</h2>
-
 <p>Use <code>#pragma mark -</code> to categorize methods in functional groupings.</p>
-
-<pre><code class="language-objc">#pragma mark - Lifecycle
-
-- (instancetype)init {}
-- (void)viewDidLoad {}
-- (void)viewWillAppear:(BOOL)animated {}
-- (void)didReceiveMemoryWarning {}
-
-#pragma mark - Custom Accessors
-
-- (void)setCustomProperty:(id)value {}
-- (id)customProperty {}
-
-#pragma mark - Public
-
-- (void)publicMethod {}
-
-#pragma mark - Private
-
-- (void)privateMethod {}
-
-#pragma mark - Protocol conformance
-#pragma mark - UITextFieldDelegate
-#pragma mark - UITableViewDataSource
-#pragma mark - UITableViewDelegate
-
-#pragma mark - IBActions
-
-- (IBAction)submitData:(id)sender {}
-</code></pre>
-
-<h2 id="spacing">Spacing</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span><span style="color:#75715e">#pragma mark - Lifecycle
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>- (<span style="color:#66d9ef">instancetype</span>)<span style="color:#a6e22e">init</span> {}
+</span></span><span style="display:flex;"><span>- (<span style="color:#66d9ef">void</span>)<span style="color:#a6e22e">viewDidLoad</span> {}
+</span></span><span style="display:flex;"><span>- (<span style="color:#66d9ef">void</span>)<span style="color:#a6e22e">viewWillAppear:</span>(<span style="color:#66d9ef">BOOL</span>)animated {}
+</span></span><span style="display:flex;"><span>- (<span style="color:#66d9ef">void</span>)<span style="color:#a6e22e">didReceiveMemoryWarning</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma mark - Custom Accessors
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>- (<span style="color:#66d9ef">void</span>)<span style="color:#a6e22e">setCustomProperty:</span>(<span style="color:#66d9ef">id</span>)value {}
+</span></span><span style="display:flex;"><span>- (<span style="color:#66d9ef">id</span>)<span style="color:#a6e22e">customProperty</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma mark - Public
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>- (<span style="color:#66d9ef">void</span>)<span style="color:#a6e22e">publicMethod</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma mark - Private
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>- (<span style="color:#66d9ef">void</span>)<span style="color:#a6e22e">privateMethod</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma mark - Protocol conformance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma mark - UITextFieldDelegate
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma mark - UITableViewDataSource
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma mark - UITableViewDelegate
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma mark - IBActions
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>- (<span style="color:#66d9ef">IBAction</span>)<span style="color:#a6e22e">submitData:</span>(<span style="color:#66d9ef">id</span>)sender {}
+</span></span></code></pre></div><h2 id="spacing">Spacing</h2>
 <ul>
 <li>Indent using tabs. Be sure to set this preference in Xcode.</li>
 <li>Method braces and other braces (<code>if</code>/<code>else</code>/<code>switch</code>/<code>while</code> etc.) always open on the same line as the statement but close on a new line.</li>
 </ul>
-
 <p><strong>For example:</strong></p>
-
-<pre><code class="language-objc">if(user.isHappy) {
-    // Do something
-}
-else {
-    // Do something else
-}
-</code></pre>
-
-<ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span><span style="color:#66d9ef">if</span>(user.isHappy) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Do something
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Do something else
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><ul>
 <li>There should be exactly one blank line between methods to aid in visual clarity and organization.</li>
 <li>Whitespace within methods should be used to separate functionality (though often this can indicate an opportunity to split the method into several, smaller methods). In methods with long or verbose names, a single line of whitespace may be used to provide visual separation before the method’s body.</li>
 <li><code>@synthesize</code> and <code>@dynamic</code> should each be declared on new lines in the implementation.</li>
 </ul>
-
 <h2 id="conditionals">Conditionals</h2>
-
 <p><strong>For example:</strong></p>
-
-<pre><code class="language-objc">if (!error) {
-    return success;
-}
-</code></pre>
-
-<p><strong>Not:</strong></p>
-
-<pre><code class="language-objc">if (!error)
-    return success;
-</code></pre>
-
-<p><strong>or:</strong></p>
-
-<pre><code class="language-objc">if (!error) return success;
-</code></pre>
-
-<h2 id="ternary-operator">Ternary Operator</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>error) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> success;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Not:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>error)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> success;
+</span></span></code></pre></div><p><strong>or:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>error) <span style="color:#66d9ef">return</span> success;
+</span></span></code></pre></div><h2 id="ternary-operator">Ternary Operator</h2>
 <p>The Ternary operator, <strong>?</strong> , should only be used when it increases clarity or code neatness, only with a single condition.</p>
-
 <p><strong>For example:</strong></p>
-
-<pre><code class="language-objc">result = a &gt; b ? x : y;
-</code></pre>
-
-<p><strong>Not:</strong></p>
-
-<pre><code class="language-objc">result = a &gt; b ? x = c &gt; d ? c : d : y;
-</code></pre>
-
-<h2 id="methods">Methods</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span>result <span style="color:#f92672">=</span> a <span style="color:#f92672">&gt;</span> b <span style="color:#f92672">?</span> x : y;
+</span></span></code></pre></div><p><strong>Not:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span>result <span style="color:#f92672">=</span> a <span style="color:#f92672">&gt;</span> b <span style="color:#f92672">?</span> x <span style="color:#f92672">=</span> c <span style="color:#f92672">&gt;</span> d <span style="color:#f92672">?</span> c : d : y;
+</span></span></code></pre></div><h2 id="methods">Methods</h2>
 <p>In method signatures, there should be a space after the scope (-/+ symbol). There should be a space between the method segments.</p>
-
 <p><strong>For example:</strong></p>
-
-<pre><code class="language-objc">- (void)setExampleText:(NSString *)text image:(UIImage *)image;
-</code></pre>
-
-<p>The beginning bracket should be in the same line of the method signature</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span>- (<span style="color:#66d9ef">void</span>)<span style="color:#a6e22e">setExampleText:</span>(NSString <span style="color:#f92672">*</span>)text <span style="color:#a6e22e">image:</span>(UIImage <span style="color:#f92672">*</span>)image;
+</span></span></code></pre></div><p>The beginning bracket should be in the same line of the method signature</p>
 <p><strong>For example:</strong></p>
-
-<pre><code class="language-objc">- (void)setExampleText:(NSString *)text image:(UIImage *)image {    
-    // Code...
-}
-</code></pre>
-
-<h2 id="variables">Variables</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span>- (<span style="color:#66d9ef">void</span>)<span style="color:#a6e22e">setExampleText:</span>(NSString <span style="color:#f92672">*</span>)text <span style="color:#a6e22e">image:</span>(UIImage <span style="color:#f92672">*</span>)image {    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Code...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h2 id="variables">Variables</h2>
 <p>TO-DO</p>
-
 <h2 id="naming">Naming</h2>
-
 <p>TO-DO</p>
-
 <h2 id="comments">Comments</h2>
-
 <p>TO-DO</p>
-
 <h2 id="constants">Constants</h2>
-
 <p>TO-DO</p>
-
 <h2 id="singletons">Singletons</h2>
-
 <p>Singleton objects should use a thread-safe pattern for creating their shared instance.</p>
-
-<pre><code class="language-objc">+ (instancetype)sharedInstance 
-{
-   static id sharedInstance = nil;
-
-   static dispatch_once_t onceToken;
-   dispatch_once(&amp;onceToken, ^{
-      sharedInstance = [[self alloc] init];
-   });
-
-   return sharedInstance;
-}
-</code></pre>
-
-<h2 id="sources">Sources</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span>+ (<span style="color:#66d9ef">instancetype</span>)<span style="color:#a6e22e">sharedInstance</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">id</span> sharedInstance <span style="color:#f92672">=</span> nil;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">static</span> dispatch_once_t onceToken;
+</span></span><span style="display:flex;"><span>   dispatch_once(<span style="color:#f92672">&amp;</span>onceToken, <span style="color:#f92672">^</span>{
+</span></span><span style="display:flex;"><span>      sharedInstance <span style="color:#f92672">=</span> [[self alloc] init];
+</span></span><span style="display:flex;"><span>   });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> sharedInstance;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="sources">Sources</h2>
 <p>This guide has been built taking inspiration from the following sources:</p>
-
 <ul>
 <li><a href="https://github.com/github/objective-c-style-guide">GitHub</a></li>
 <li><a href="https://github.com/realm/realm-cocoa/wiki/Objective-C-Style-Guide">Realm-Cocoa</a></li>
@@ -237,7 +200,7 @@ else {
 
   </div>
 </section>
-<section id="tag-pane" class="row meta">
+<section id="tag-pane" class="meta">
   
   <div class="col-md-12">
     <h6 class="text-right meta">
@@ -265,7 +228,7 @@ else {
 
 <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -286,7 +249,7 @@ else {
 
 
 
-<section id="menu-pane" class="row menu text-center">
+<section id="menu-pane" class="menu text-center">
   
   
   
@@ -301,11 +264,14 @@ else {
 
 
 
-<footer class="row text-center footer">
+<footer class="text-center footer">
   <hr />
   
-  <h6 class="text-center copyright">© 2020. Andrea Stevanato. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  <h6 class="text-center copyright">© 2023. Andrea Stevanato. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
   
+      
+      <h6><a href="" aria-label="RSS Feed"><i class="fas fa-rss" aria-hidden="true"></i></a></h6>
+    
   
 </footer>
 
@@ -318,7 +284,8 @@ else {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/custom.js"></script>
 </body>
 </html>
 
